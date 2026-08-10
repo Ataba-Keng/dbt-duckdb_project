@@ -56,7 +56,7 @@ dbt test
 
 Pour plus d'informations sur dbt, consultez la [documentation officielle](https://docs.getdbt.com/).
 
-## Fichiers de configuration
+## Fichiers de configuration      
 
 - `dbt_project.yml` - Configuration principale du projet dbt
 - `profiles.yml` - Configuration des connexions (à ne pas committer)
