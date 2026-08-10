@@ -2,11 +2,11 @@
 
 Un projet de transformation de données utilisant **dbt** (data build tool) pour la gestion des workflows ETL et la qualité des données.
 
-## 📋 Description
+##  Description
 
 Ce projet utilise dbt pour transformer et orchestrer les données brutes en modèles de données propres et exploitables. Il inclut des modèles de staging et des tests pour assurer la qualité des données.
 
-## 🗂️ Structure du projet
+##  Structure du projet
 
 - **models/** - Modèles dbt (transformations SQL)
   - `stg_customers.sql` - Modèle de staging pour les clients
@@ -24,7 +24,7 @@ Ce projet utilise dbt pour transformer et orchestrer les données brutes en mod�
 
 - **logs/** - Journaux des exécutions
 
-## 🚀 Démarrage rapide
+##  Démarrage rapide
 
 ### Prérequis
 - Python 3.8+
@@ -47,20 +47,18 @@ dbt run
 dbt test
 ```
 
-## 📦 Dépendances
+##  Dépendances
 
 - **dbt** - Outil de transformation de données
 - **DuckDB** - Base de données analytique légère
 
-## 📖 Documentation
+##  Documentation
 
 Pour plus d'informations sur dbt, consultez la [documentation officielle](https://docs.getdbt.com/).
 
-## 📝 Fichiers de configuration
+##  Fichiers de configuration
 
 - `dbt_project.yml` - Configuration principale du projet dbt
 - `profiles.yml` - Configuration des connexions (à ne pas committer)
 
-## ⚖️ Licence
 
-À spécifier selon vos besoins.
