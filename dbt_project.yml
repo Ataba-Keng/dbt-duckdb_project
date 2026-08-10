@@ -1,0 +1,5 @@
+name: dbt_project
+profile: dbt_duckdb
+
+model-paths: ["models"]
+  

@@ -1,0 +1,59 @@
+# dbt artifacts
+target/
+dbt_packages/
+
+# Logs
+logs/
+
+# Profiles (contains credentials)
+profiles.yml
+
+# Database files
+*.duckdb
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Project specific
+node_modules/
+.env
+.env.local
