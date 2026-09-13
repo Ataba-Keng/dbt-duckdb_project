@@ -1,64 +1,50 @@
-# dbt Project
+# 🏗️ dbt-duckdb_project — Modélisation & qualité des données avec dbt
 
-Un projet de transformation de données utilisant **dbt** (data build tool) pour la gestion des workflows ETL et la qualité des données.
+Projet **dbt Core** (niveau staging) sur **DuckDB** : transformation de données brutes en modèles propres, testés et documentés.
 
-## Description
+---
 
-Ce projet utilise dbt pour transformer et orchestrer les données brutes en modèles de données propres et exploitables. Il inclut des modèles de staging et des tests pour assurer la qualité des données.
+## 🇫🇷 Français
 
-## Structure du projet
+### 🎯 Objectif
+Construire une **couche de transformation** fiable : partir de données brutes (CSV de démo) et produire des modèles de staging **propres, testés et documentés** grâce aux bonnes pratiques dbt.
 
-- **models/** - Modèles dbt (transformations SQL)
-  - `stg_customers.sql` - Modèle de staging pour les clients
-  - `stg_orders.sql` - Modèle de staging pour les commandes
-  - `sources.yml` - Définition des sources de données
+### 🏗️ Démarche
+1. **Sources** (`models/sources.yml`) — déclaration et test des données brutes.
+2. **Modèles de staging** (`stg_customers.sql`, `stg_orders.sql`) — nettoyage, renommage, typage.
+3. **Tests & documentation** — contraintes/not-null/uniques ; docs générées en artefacts.
+4. **Exécution** — `dbt run`, `dbt test`, `dbt docs generate`.
 
-- **jaffle-data/** - Données brutes d'exemple
-  - `raw_customers.csv` - Données brutes des clients
-  - `raw_orders.csv` - Données brutes des commandes
+### 🛠️ Technologies
+dbt Core · DuckDB (`dbt-duckdb`) · SQL · CSV (données exemples `jaffle-data`)
 
-- **target/** - Artefacts générés par dbt
-  - Manifests
-  - Résultats d'exécution
-  - Code compilé
+### 📊 Résultats
+- Modèles **staging testés** avec les assertions dbt (qualité garantie en amont).
+- Workflow dbt **complet** : manifest, résultats de tests, documentation générée.
+- Base la plus simple possible pour démontrer **modélisation analytique reproductible**.
 
-- **logs/** - Journaux des exécutions
+---
 
-##  Démarrage rapide
+## 🇬🇧 English
 
-### Prérequis
-- Python 3.8+
-- dbt 1.0+
-- DuckDB
+### 🎯 Objective
+Build a reliable **transformation layer**: from raw data (demo CSVs) to clean, tested and documented staging models, following dbt best practices.
 
-### Installation
+### 🏗️ Approach
+1. **Sources** (`models/sources.yml`) — declaring and testing raw data.
+2. **Staging models** (`stg_customers.sql`, `stg_orders.sql`) — cleaning, renaming, typing.
+3. **Tests & documentation** — not-null/uniqueness constraints; docs generated as artefacts.
+4. **Execution** — `dbt run`, `dbt test`, `dbt docs generate`.
 
-```bash
-# Installer les dépendances dbt
-pip install dbt-duckdb
+### 🛠️ Tech Stack
+dbt Core · DuckDB (`dbt-duckdb`) · SQL · CSV (sample data `jaffle-data`)
 
-# Configurer dbt
-dbt debug
+### 📊 Results
+- **Tested staging models** with dbt assertions (upstream data quality).
+- Complete **dbt workflow**: manifest, test results, generated documentation.
+- The simplest possible base to demonstrate **reproducible analytical modelling**.
 
-# Exécuter les modèles
-dbt run
+---
 
-# Exécuter les tests
-dbt test
-```
-
-## Dépendances
-
-- **dbt** - Outil de transformation de données
-- **DuckDB** - Base de données analytique légère
-
-## Documentation
-
-Pour plus d'informations sur dbt, consultez la [documentation officielle](https://docs.getdbt.com/).
-
-## Fichiers de configuration      
-
-- `dbt_project.yml` - Configuration principale du projet dbt
-- `profiles.yml` - Configuration des connexions (à ne pas committer)
-
-
+### 🚀 Démarrage / Quick start
+`pip install dbt-duckdb` → `dbt debug` → `dbt run` → `dbt test`
